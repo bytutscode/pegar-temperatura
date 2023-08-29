@@ -25,6 +25,7 @@ const getWeather = async (req, res) => {
 
         return res.json(info)
     } catch (err) {
+        console.log(err)
         return res.status(404).json({ error: 'Unfortunately, we have not found your city. Please verify the if the location is correct and try again. If the errors persist, there might be a problem on our server.' })
     }
 }
